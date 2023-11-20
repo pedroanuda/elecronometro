@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./sobre.js" defer></script>
+    <title>Sobre o Elecronômetro</title>
+    <style>
+        html {
+            font-family: 'Segoe UI', Helvetica, sans-serif;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        body {
+            -webkit-app-region: drag;
+            -webkit-user-select: none;
+            user-select: none;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            margin: 0;
+        }
+
+        body * {
+            margin: 0;
+        }
+
+        div.logo_text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: .5rem;
+            margin: 0 5%;
+        }
+
+        body img {
+            width: 100px;
+            height: 100px;
+        }
+
+        body button {
+            -webkit-app-region: no-drag;
+            margin-top: 2rem;
+            padding: .5rem;
+            width: 40%;
+            border: none;
+            border-radius: 8px;
+            background-color: rgb(216, 216, 216);
+            cursor: pointer;
+        }
+
+        body button:hover {
+            background-color: rgb(185, 185, 185);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo_text">
+        <img src="./img/elecronometro_icon.png">
+        <p>
+            <strong>Elecronômetro</strong><br>
+            Versão: 1.0.0
+        </p>
+        <p>
+            Criado como forma de exemplificar algumas funções do Electron JS.
+        </p>
+    </div>
+    <button id="closeButton">Fechar</button>
+</body>
+</html>

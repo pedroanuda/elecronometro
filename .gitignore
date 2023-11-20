@@ -1,0 +1,4 @@
+# Pastas a serem ignoradas pelo git
+node_modules/
+out/
+dist/

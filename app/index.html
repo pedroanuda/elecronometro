@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" type="module" defer></script>
+    <title>Elecronometro</title>
+</head>
+<body>
+    <header class="titlebarContainer">
+        <div class="titlebar">
+            <img id="more-button" src="./img/more.svg">
+            <h1>Elecronômetro</h1> 
+        </div>
+    </header>
+    <main>
+        <div class="stopwatchContainer">
+            <span id="stopwatchDisplay">00:00:00</span>
+            <div class="stopwatchControllers">
+                <button id="start_pauseButton">
+                    <img src="./img/play.svg">
+                    Iniciar
+                </button>
+                <button id="stopButton" class="disabled">
+                    <img src="./img/stop.svg">
+                    Parar
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

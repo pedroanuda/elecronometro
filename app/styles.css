@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --titlebar-height-fallback: 40;
+}
+
+html {
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+}
+
+.titlebarContainer {
+    position: absolute;
+    top: env(titlebar-area-y, 0);
+    width: 100%;
+    background-color: #FFFFFF;
+    height: env(titlebar-area-height, var(--titlebar-height-fallback));
+}
+
+.titlebar {
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: env(titlebar-area-width, 100%);
+}
+
+.titlebar > h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px;
+}
+
+.titlebar > #more-button {
+    -webkit-app-region: no-drag;
+    width: 16px;
+    height: 16px;
+    padding: 8px;
+    margin: 0 0 0 8px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color .175s;
+}
+
+#more-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: env(titlebar-area-height, var(--titlebar-height-fallback));
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stopwatchContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stopwatchContainer > #stopwatchDisplay {
+    font-size: 4rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+.stopwatchControllers {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.stopwatchControllers > button {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    & img {
+        width: 1rem;
+    }
+}
+
+button.disabled {
+    cursor: auto;
+    opacity: .5;
+}
+
+#start_pauseButton {
+    background-color: rgb(8, 197, 8);
+}
+
+#stopButton {
+    background-color: rgb(219, 3, 3);
+}
+
+#start_pauseButton.started {
+    background-color: rgb(97, 97, 97);
+}
